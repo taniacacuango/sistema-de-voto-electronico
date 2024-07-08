@@ -30,7 +30,7 @@ public class Main {
                 opcion = scanner.nextInt();
                 
                 switch (opcion) {
-                    case 1:
+                    case 1 -> {
                         if (votanteIngresado == null) {
                             System.out.print("Ingrese su ID de votante: ");
                             int idVotante = scanner.nextInt();
@@ -52,20 +52,14 @@ public class Main {
                         } else {
                             System.out.println("Ya has iniciado sesión como votante.");
                         }
-                        break;
-                    case 2:
-                        System.out.println("Mostrando resultados...");
-                        // Aquí iría la lógica para mostrar los resultados de la votación
-                        // Por ejemplo: resultados.mostrarResultados();
-                        break;
-                    case 3:
-                        System.out.println("¡Gracias por usar el Sistema de Voto Electrónico!");
-                        break;
-                    default:
-                        System.out.println("""
+                    }
+                    case 2 -> System.out.println("Mostrando resultados...");
+                    // Aquí iría la lógica para mostrar los resultados de la votación
+                    // Por ejemplo: resultados.mostrarResultados();
+                    case 3 -> System.out.println("¡Gracias por usar el Sistema de Voto Electrónico!");
+                    default -> System.out.println("""
                                            Opción inválida. Por favor, seleccione una opción válida." + "\n"
                                            """);
-                        break;
                 }
             } while (opcion != 3);
         }

@@ -4,10 +4,16 @@
  */
 package controlador;
 
+import modelo.Votante;
+
 /**
  *
  * @author User
  */
 public class VotanteController {
+
+    public Votante loginVotante(int idVotante, String claveVotante) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
