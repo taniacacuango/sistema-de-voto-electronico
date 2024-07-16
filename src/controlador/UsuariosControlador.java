@@ -4,16 +4,24 @@
  */
 package controlador;
 
-import modelo.Votante;
+import com.sun.jdi.connect.spi.Connection;
+import java.util.Scanner;
 
 /**
  *
- * @author User
+ * @author alext
  */
-public class VotanteController {
-
-    public Votante loginVotante(int idVotante, String claveVotante) {
+public class UsuariosControlador {
+    private ConexionBDD conexion;
+    private Connection conectado;
+    
+        public UsuariosControlador() {
+        conexion = new ConexionBDD();
+        conectado = (Connection) conexion.conectar();
+    }    
+    public static void usuarioMenu(Scanner scanner) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
     
 }
