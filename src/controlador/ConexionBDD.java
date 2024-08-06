@@ -4,10 +4,6 @@
  */
 package controlador;
 
-/**
- *
- * @author alext
- */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -38,7 +34,6 @@ java.sql.Connection conexion;
             System.out.println("");
         }
     }
-
     
 }
 

@@ -12,10 +12,8 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/alext/Documents/NetBeansProjects/VotoElectronico/src/vista/Main.java</file>
-            <file>file:/C:/Users/alext/Documents/NetBeansProjects/VotoElectronico/src/controlador/VotanteControlador.java</file>
-            <file>file:/C:/Users/alext/Documents/NetBeansProjects/VotoElectronico/src/modelo/VotosModelo.java</file>
-            <file>file:/C:/Users/alext/Documents/NetBeansProjects/VotoElectronico/src/controlador/CandidatoControlador.java</file>
+            <file>file:/C:/Users/ruby/OneDrive/VotoElectronico/src/vista/Main.java</file>
+            <file>file:/C:/Users/ruby/OneDrive/VotoElectronico/src/controlador/CandidatoControlador.java</file>
         </group>
     </open-files>
 </project-private>

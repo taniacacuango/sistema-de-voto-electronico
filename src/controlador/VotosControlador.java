@@ -10,31 +10,35 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import modelo.VotosModelo;
 
+/**
+ *
+ * @author alext
+ */
 public class VotosControlador {
-    private ConexionBDD conexion;
+        private ConexionBDD conexion;
     private Connection conectado;
-
-    public VotosControlador() {
+    
+        public VotosControlador() {
         conexion = new ConexionBDD();
-        conectado = conexion.conectar();
+        conectado = (Connection) conexion.conectar();
     }    
-
-    public boolean registrarVoto(VotosModelo voto) {
-        String sql = "INSERT INTO votos (Voto_Cand_id, Voto_Cedula) VALUES (?, ?)";
-        try (PreparedStatement pstmt = conectado.prepareStatement(sql)) {
-            pstmt.setInt(1, voto.getVoto_cand_id());
-            pstmt.setString(2, voto.getVoto_cedula());
-            int filasInsertadas = pstmt.executeUpdate();
-            return filasInsertadas > 0;
-        } catch (SQLException e) {
-            System.out.println("Error al registrar el voto: " + e.getMessage());
-            return false;
-        }
+        
+        
+      public boolean registrarVoto(VotosModelo voto) {
+    String sql = "INSERT INTO votos (Voto_Cand_id, Voto_Cedula) VALUES (?, ?)";
+    try (PreparedStatement pstmt = conectado.prepareStatement(sql)) {
+        pstmt.setInt(1, voto.getVoto_cand_id());
+        pstmt.setString(2, voto.getVoto_cedula());
+        int filasInsertadas = pstmt.executeUpdate();
+        return filasInsertadas > 0;
+    } catch (SQLException e) {
+        System.out.println("Error al registrar el voto: " + e.getMessage());
+        return false;
     }
-
-    public int obtenerVotosPorCandidato(int candId) {
+}
+        public int obtenerVotosPorCandidato(int candId) {
         int totalVotos = 0;
-        String sql = "SELECT COUNT(*) AS Total_Votos FROM votos WHERE Voto_Cand_id = ?";
+        String sql = "SELECT Total_Votos FROM resultados WHERE Cand_id = ?";
         try (PreparedStatement stmt = conectado.prepareStatement(sql)) {
             stmt.setInt(1, candId);
             ResultSet rs = stmt.executeQuery();
